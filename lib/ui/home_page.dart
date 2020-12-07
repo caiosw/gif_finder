@@ -6,6 +6,7 @@ import 'package:gif_finder/ui/gif_page.dart';
 import 'package:http/http.dart' as http;
 import 'package:share/share.dart';
 import 'package:transparent_image/transparent_image.dart';
+import 'package:gif_finder/share_gif.dart';
 
 class HomePage extends StatefulWidget {
   @override
@@ -13,9 +14,6 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
-
-
-
   String _apiKey = "QGDapJeQOM1vcSc7MeQRsWduqXFstW5r";
   String _search;
   int _offset = 0;
@@ -42,10 +40,6 @@ class _HomePageState extends State<HomePage> {
   @override
   void initState() {
     super.initState();
-
-    _getGifs().then((map) => {
-      print(map)
-    });
   }
 
   @override
@@ -119,6 +113,7 @@ class _HomePageState extends State<HomePage> {
   }
 
   Widget _createGifTable(BuildContext context, AsyncSnapshot snapshot) {
+
     return GridView.builder(
       padding: EdgeInsets.all(10.0),
       gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
@@ -145,9 +140,7 @@ class _HomePageState extends State<HomePage> {
               );
             },
             onLongPress: () {
-              Share.share(
-                snapshot.data["data"][index]["images"]["fixed_height"]["url"]
-              );
+              ShareGif.share(snapshot.data["data"][index]);
             },
           );
         } else {
