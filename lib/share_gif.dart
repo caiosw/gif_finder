@@ -14,7 +14,8 @@ class ShareGif {
           [file.path],
           text: image["title"] +
             "\nFind and share gifs with this awesome app!" +
-            "\nDownload here: [link]"
+            "\nDownload here: [link]" +
+            "\nPowered by Giphy"
       )
     });
   }
