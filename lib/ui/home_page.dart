@@ -4,6 +4,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:gif_finder/ui/gif_page.dart';
 import 'package:http/http.dart' as http;
+import 'package:share/share.dart';
 
 
 class HomePage extends StatefulWidget {
@@ -140,6 +141,11 @@ class _HomePageState extends State<HomePage> {
                 MaterialPageRoute(builder: (context) =>
                   GifPage(snapshot.data["data"][index])
                 )
+              );
+            },
+            onLongPress: () {
+              Share.share(
+                snapshot.data["data"][index]["images"]["fixed_height"]["url"]
               );
             },
           );
