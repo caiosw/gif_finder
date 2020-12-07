@@ -1,16 +1,18 @@
 # gif_finder
 
-Flutter's gif finder app
+Flutter's gif finder app for educational purposes
 
-## Getting Started
+# app's features:
+- Show trending gifs when opened
+- Search field, where the app should bring the results paginated
+- Share the gifs with your friends! Originally the project was sharing the image's url, after updated to the gif itself and an aditional text
 
-This project is a starting point for a Flutter application.
+# dependencies used in this project:
+- http: ^0.12.2
+- share: ^0.6.5+4
+- transparent_image: ^1.0.0
+- path_provider: ^1.6.24
 
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
-
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+# api:
+- https://api.giphy.com/v1/gifs/trending
+- https://api.giphy.com/v1/gifs/search
