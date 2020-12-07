@@ -13,6 +13,6 @@ Flutter's gif finder app for educational purposes
 - transparent_image: ^1.0.0
 - path_provider: ^1.6.24
 
-# api:
+# APIs:
 - https://api.giphy.com/v1/gifs/trending
 - https://api.giphy.com/v1/gifs/search
